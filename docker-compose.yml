@@ -1,0 +1,17 @@
+services:
+  postgres-equipement:
+    image: postgres:15-alpine
+    container_name: postgres-equipement
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME:-equipementdb}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_equipement_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_equipement_data:
+    driver: local
