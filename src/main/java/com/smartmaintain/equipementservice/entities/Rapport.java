@@ -40,7 +40,7 @@ public class Rapport {
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "rapport_attachments", joinColumns = @JoinColumn(name = "rapport_id"))
-    @Column(name = "attachment_url")
+    @Column(name = "attachment_url", columnDefinition = "TEXT")
     private java.util.List<String> attachments = new java.util.ArrayList<>();
 
     @PrePersist

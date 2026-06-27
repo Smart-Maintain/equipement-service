@@ -12,8 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/piece-requests")
-@CrossOrigin(origins = "*")
+@RequestMapping("/piece-requests")
 public class PieceRequestController {
 
     private final PieceRequestService pieceRequestService;
