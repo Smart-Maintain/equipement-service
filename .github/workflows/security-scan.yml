@@ -110,7 +110,7 @@ jobs:
     - name: Exécuter le Script d'Analyse et Envoi Telegram
       run: |
         pip install requests reportlab
-        python security-notify.py
+        python "$GITHUB_WORKSPACE/security-notify.py"
       env:
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
